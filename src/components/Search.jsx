@@ -6,6 +6,8 @@ import { Dialog, Transition } from '@headlessui/react'
 import algoliasearch from 'algoliasearch/lite'
 import clsx from 'clsx'
 
+// TODO: need to apply for DocSearch
+// https://docsearch.algolia.com/docs/who-can-apply
 const searchClient = algoliasearch(
   process.env.NEXT_PUBLIC_DOCSEARCH_APP_ID,
   process.env.NEXT_PUBLIC_DOCSEARCH_API_KEY
@@ -485,7 +487,7 @@ export function Search() {
         {...buttonProps}
       >
         <SearchIcon className="h-5 w-5 stroke-current" />
-        Find something...
+        Currently not working...
         <kbd className="ml-auto text-2xs text-zinc-400 dark:text-zinc-500">
           <kbd className="font-sans">{modifierKey}</kbd>
           <kbd className="font-sans">K</kbd>
