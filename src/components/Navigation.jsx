@@ -188,7 +188,7 @@ export const navigation = [
 		title: "Testing",
 		links: [
 			{title: "Index", href: "/"},
-			{ title: "Login", href: "/testing" },
+			{ title: "Login", href: "/login" },
 			{title: "Inviting Users", href: "/inviting-users"},
 			{title: "Coaching Dashboard", href: "/coaching-dashboard"},
 			{title: "Client Dashboard", href: "/client-dashboard"}
