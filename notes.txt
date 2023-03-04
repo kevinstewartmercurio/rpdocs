@@ -2,3 +2,5 @@ to do:
 - link on login page uses mdx syntax, which does not open in a new tab
 - search bar functionality requires an API key that you need to apply for
     https://docsearch.algolia.com/docs/who-can-apply
+- not sure what to do with the sign in button
+- not sure what to do with the copyright text
