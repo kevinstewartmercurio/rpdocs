@@ -188,10 +188,43 @@ export const navigation = [
 		title: "Guides",
 		links: [
 			{title: "Index", href: "/"},
-			{ title: "Login", href: "/login" },
-			{title: "Inviting Users", href: "/inviting-users"},
+			// {title: "Login", href: "/login"},
+			// {title: "Inviting Users", href: "/inviting-users"},
 			{title: "Coaching Dashboard", href: "/coaching-dashboard"},
-			{title: "Client Dashboard", href: "/client-dashboard"}
+			// {title: "Client Dashboard", href: "/client-dashboard"}
+		]
+	},
+	{
+		title: "Coaches",
+		links: [
+			{title: "Coach Dashboard", href: "/coach-dashboard"},
+				// logging in --> login instructions
+				// inviting users --> sending invitations via the invite user form
+				// client list --> access to individual client dashboards
+			{title: "Generating Diets", href: "/"},
+				// after your client completes the intake form there will be an upcoming diet
+				// from this page you can chat, see graph, and see feed
+				// before generating a diet...
+				// edit intake form --> if any of the intake form responses need to be changed...
+				// meals per day --> see changes reflected in table...
+				// edit check-in days --> choose when you want to schedule check in with the client...
+				// transfer diet --> pass your client over to another coach...
+				// delete diet --> delete the upcoming diet, client will need to refill out the intake form
+				// history --> see the editing history of the current diet
+				// generating a diet --> after all diet input is set...
+			{title: "Editing Upcoming Diets", href: "/"},
+				// after generating a diet, you can still...
+				// edit a meal --> clicking the edit button on an individual meal allows you to change...
+				// bulk edits --> you can select individual meals, full days, and/or full weeks to...
+				// locking meals --> ?
+				// copying meals --> select days, copy day/week
+				// posting --> sending diet to client
+			{title: "Managing An Active Diet", href: "/"},
+				// after posting a diet, you can still...
+				// the client will post complete their days and check in with you on check in days
+				// ending a diet --> after the client completes their diet...
+			{title: "Completed Diets", href: "/"}
+				// diets are saved for reference, you can duplicate if needed
 		]
 	}
 ]

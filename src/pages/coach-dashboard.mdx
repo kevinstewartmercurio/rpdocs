@@ -1,0 +1,40 @@
+import Image from "next/image"
+
+import { LoggingIn } from "@/components/LoggingIn"
+
+import login_email from "../../public/images/login_email.png"
+import login_code from "../../public/images/login_code.png"
+
+export const sections = [
+    {title: "Logging In", id: "logging-in"}
+]
+
+# Coach Dashboard
+
+The coach dashboard is where you'll be able to see how your clients are doing
+with their diets. In order to access the coach dashboard, you'll need to login.
+
+<LoggingIn />
+
+Following this link: 
+[https://coaching.rpstrength.com/login](https://coaching.rpstrength.com/login)
+leads you to a page prompting you for your email. After entering your email
+you'll receive a code that allows you to log in.
+
+<div className="flex">
+    <div className="pr-4">
+        <Image
+            src={login_email}
+            alt="login_email.png"
+        />
+    </div>
+    <div className="pr-4">
+        <Image
+            src={login_code}
+            alt="login_code.png"
+        />
+    </div>
+</div> 
+
+This brings you to the coach dashboard. From here you can invite users and see a
+list of your clients.
