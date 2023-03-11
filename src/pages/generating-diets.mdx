@@ -1,0 +1,152 @@
+import Image from "next/image"
+
+import { EditingIntakeFormResponses } from "@/components/GeneratingDiets"
+import { MealsPerDay } from "@/components/GeneratingDiets"
+import { CheckInDays } from "@/components/GeneratingDiets"
+import { TransferDiet } from "@/components/GeneratingDiets"
+import { DeleteDiet } from "@/components/GeneratingDiets"
+import { EditHistory } from "@/components/GeneratingDiets"
+import { GenerateDiet } from "@/components/GeneratingDiets"
+
+import generating_diets1 from "../../public/images/generating_diets1.png"
+import generating_diets2 from "../../public/images/generating_diets2.png"
+import editing_intake_form_responses from "../../public/images/editing_intake_form_responses.png"
+import meals_per_day from "../../public/images/meals_per_day.png"
+import check_in_days from "../../public/images/check_in_days.png"
+import transfer_diet from "../../public/images/transfer_diet.png"
+import delete_diet from "../../public/images/delete_diet.png"
+import edit_history from "../../public/images/edit_history.png"
+import generate_diet from "../../public/images/generate_diet.png"
+
+export const sections = [
+    {title: "Editing Intake Form Responses", id: "editing-intake-form-responses"},
+    {title: "Meals Per Day", id: "meals-per-day"},
+    {title: "Check-In Days", id: "check-in-days"},
+    {title: "Transfer Diet", id: "transfer-diet"},
+    {title: "Delete Diet", id: "delete-diet"},
+    {title: "Edit History", id: "edit-history"},
+    {title: "Generating the Diet", id: "generate-diet"}
+]
+
+# Generating Diets
+
+Before you generate a diet for you client you'll want to make sure you have all
+of their relevant information.
+
+After your client completes the intake form there will be an upcoming diet that
+requires your attention. From the coach dashboard, navigate to the client's
+specific dashboard and click on their upcoming diet.
+
+<div className="px-3">
+    <Image 
+        src={generating_diets1}
+        alt="generating_diets1.png"
+        className="rounded-2xl"
+    />
+</div>
+<div className="px-3">
+    <Image
+        src={generating_diets2}
+        alt="generating_diets2.png"
+        className="rounded-2xl"
+    />
+</div>
+
+On this page you'll find all of the client's intake form responses. 
+Additionally you'll find a thread where you can chat with the client, a graph
+that will eventually track the client's weight, an activity feed that will
+eventually store updates from the client's checkins, and an edit button that
+allows you to change the information that will be used to generate a diet.
+
+<EditingIntakeFormResponses />
+
+Editing the intake form will allow you to change the information that the client
+entered. After making changes, click "Save & Exit" to update the information.
+
+<div className="px-3">
+    <Image
+        src={editing_intake_form_responses}
+        alt="editing_intake_form_responses.png"
+        className="rounded-2xl"
+    />
+</div>
+
+<MealsPerDay />
+
+The diet will initially be set to 3 meals per day. Set each day's meal count to
+the appropriate amount and use the "Repeat" buttons to copy the previous day's
+count.
+
+<div className="px-3">
+    <Image
+        src={meals_per_day}
+        alt="meals_per_day.png"
+        className="rounded-2xl"
+    />
+</div>
+
+<CheckInDays />
+
+The diet does not have any check-in days set initially so you'll need to choose
+which days work best for you and your client.
+
+<div className="px-3">
+    <Image
+        src={check_in_days}
+        alt="check_in_days.png"
+        className="rounded-2xl"
+    />
+</div>
+
+<TransferDiet />
+
+Transferring a diet sends the client to a different coach. The diet then becomes
+theirs to update and manage.
+
+<div className="px-3">
+    <Image
+        src={transfer_diet}
+        alt="transfer_diet.png"
+        className="rounded-2xl"
+    />
+</div>
+
+<DeleteDiet />
+
+Deleting a diet wipes all information currently stored in the diet. Note that
+this includes the client's intake form responses so if the client needs a diet
+they will need to fill out the intake form again.
+
+<div className="px-3">
+    <Image
+        src={delete_diet}
+        alt="delete_diet.png"
+        className="rounded-2xl"
+    />
+</div>
+
+<EditHistory />
+
+The edit history for this diet will initially be empty but after the diet is 
+generated it will store changes made to any meal.
+
+<div className="px-3">
+    <Image
+        src={edit_history}
+        alt="edit_history.png"
+        className="rounded-2xl"
+    />
+</div>
+
+<GenerateDiet />
+
+After checking that all of the input information is correct, click the "Generate
+Diet" button.
+
+<div className="px-3">
+    <Image
+        src={generate_diet}
+        alt="generate_diet.png"
+        className="rounded-2xl"
+    />
+</div>

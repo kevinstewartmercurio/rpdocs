@@ -201,7 +201,7 @@ export const navigation = [
 				// logging in --> login instructions
 				// inviting users --> sending invitations via the invite user form
 				// client list --> access to individual client dashboards
-			{title: "Generating Diets", href: "/"},
+			{title: "Generating Diets", href: "/generating-diets"},
 				// after your client completes the intake form there will be an upcoming diet
 				// from this page you can chat, see graph, and see feed
 				// before generating a diet...
