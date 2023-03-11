@@ -1,12 +1,14 @@
 import Image from "next/image"
 
-import { EditingIntakeFormResponses } from "@/components/GeneratingDiets"
-import { MealsPerDay } from "@/components/GeneratingDiets"
-import { CheckInDays } from "@/components/GeneratingDiets"
-import { TransferDiet } from "@/components/GeneratingDiets"
-import { DeleteDiet } from "@/components/GeneratingDiets"
-import { EditHistory } from "@/components/GeneratingDiets"
-import { GenerateDiet } from "@/components/GeneratingDiets"
+import {
+    EditingIntakeFormResponses,
+    MealsPerDay,
+    CheckInDays,
+    TransferDiet,
+    DeleteDiet,
+    EditHistory,
+    GenerateDiet
+} from "@/components/GeneratingDiets"
 
 import generating_diets1 from "../../public/images/generating_diets1.png"
 import generating_diets2 from "../../public/images/generating_diets2.png"
@@ -141,7 +143,8 @@ generated it will store changes made to any meal.
 <GenerateDiet />
 
 After checking that all of the input information is correct, click the "Generate
-Diet" button.
+Diet" button. Set a length for the diet and click "Generate". This will
+update the diet's status from upcoming to active.
 
 <div className="px-3">
     <Image

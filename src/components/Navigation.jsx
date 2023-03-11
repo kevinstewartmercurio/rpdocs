@@ -185,19 +185,9 @@ function NavigationGroup({ group, className }) {
 
 export const navigation = [
 	{
-		title: "Guides",
-		links: [
-			{title: "Index", href: "/"},
-			// {title: "Login", href: "/login"},
-			// {title: "Inviting Users", href: "/inviting-users"},
-			// {title: "Coaching Dashboard", href: "/coaching-dashboard"},
-			// {title: "Client Dashboard", href: "/client-dashboard"}
-		]
-	},
-	{
 		title: "Coaches",
 		links: [
-			{title: "Coach Dashboard", href: "/coach-dashboard"},
+			{title: "Coach Dashboard", href: "/"},
 				// logging in --> login instructions
 				// inviting users --> sending invitations via the invite user form
 				// client list --> access to individual client dashboards
@@ -212,18 +202,18 @@ export const navigation = [
 				// delete diet --> delete the upcoming diet, client will need to refill out the intake form
 				// history --> see the editing history of the current diet
 				// generating a diet --> after all diet input is set...
-			{title: "Editing Upcoming Diets", href: "/"},
+			{title: "Editing Upcoming Diets", href: "/editing-upcoming-diets"},
 				// after generating a diet, you can still...
 				// edit a meal --> clicking the edit button on an individual meal allows you to change...
 				// bulk edits --> you can select individual meals, full days, and/or full weeks to...
 				// locking meals --> ?
 				// copying meals --> select days, copy day/week
 				// posting --> sending diet to client
-			{title: "Managing An Active Diet", href: "/"},
+			{title: "Managing An Active Diet", href: "/managing-an-active-diet"},
 				// after posting a diet, you can still...
 				// the client will post complete their days and check in with you on check in days
 				// ending a diet --> after the client completes their diet...
-			{title: "Completed Diets", href: "/"}
+			{title: "Completed Diets", href: "/completed-diets"}
 				// diets are saved for reference, you can duplicate if needed
 		]
 	}

@@ -1,36 +1,77 @@
-{/* import { Guides } from '@/components/Guides' */}
-{/* import { Resources } from '@/components/Resources' */}
+import Image from "next/image"
 
-export const description =
-  'Learn everything there is to know about the Protocol API and integrate Protocol into your product.'
+import { LoggingIn } from "@/components/CoachDashboard"
+import { InvitingUsers } from "@/components/CoachDashboard"
+import { ClientList } from "@/components/CoachDashboard"
+
+import login_email from "../../public/images/login_email.png"
+import login_code from "../../public/images/login_code.png"
+import invite_user from "../../public/images/invite_user.png"
+import client_list from "../../public/images/client_list.png"
 
 export const sections = [
-  // { title: 'Guides', id: 'guides' },
-  // { title: 'Resources', id: 'resources' },
+    {title: "Logging In", id: "logging-in"},
+    {title: "Inviting Users", id: "inviting-users"},
+    {title: "Client List", id: "client-list"}
 ]
 
-# API Documentation
+# Coach Dashboard
 
-Use the Protocol API to access contacts, conversations, group messages, and more and seamlessly integrate your product into the workflows of dozens of devoted Protocol users. {{ className: 'lead' }}
+The coach dashboard is where you'll be able to see how your clients are doing
+with their diets. In order to access the coach dashboard, you'll need to login.
 
-<div className="not-prose mb-16 mt-6 flex gap-3">
-  <Button href="/quickstart" arrow="right" children="Quickstart" />
-  <Button href="/sdks" variant="outline" children="Explore SDKs" />
+<LoggingIn />
+
+Following this link: 
+[https://coaching.rpstrength.com/login](https://coaching.rpstrength.com/login)
+leads you to a page prompting you for your email. After entering your email
+you'll receive a code that allows you to log in.
+
+<div className="flex flex-col sm:flex-row">
+    <div className="px-3">
+        <Image
+            src={login_email}
+            alt="login_email.png"
+            className="rounded-2xl"
+        />
+    </div>
+    <div className="px-3">
+        <Image
+            src={login_code}
+            alt="login_code.png"
+            className="rounded-2xl"
+        />
+    </div>
+</div> 
+
+This brings you to the coach dashboard. From here you can invite users and see a
+list of your clients.
+
+<InvitingUsers />
+
+You can invite a new client or coach using the "Invite User" button. After you
+fill out the invite form with the new user's information they'll receive an 
+email inviting them to join the program. Note that when you invite new clients
+you'll need to assign them to a coach that they can work with.
+
+<div className="px-3">
+    <Image
+        src={invite_user}
+        alt="invite_user.png"
+        className="rounded-2xl"
+    />
 </div>
 
-## Getting started {{ anchor: false }}
+<ClientList />
 
-To get started, create a new application in your [developer settings](#), then read about how to make requests for the resources you need to access using our HTTP APIs or dedicated client SDKs. When your integration is ready to go live, publish it to our [integrations directory](#) to reach the Protocol community. {{ className: 'lead' }}
+The coach dashboard is where you'll find information about all of your clients.
+Clicking on a client's "Dashboard" button takes you to their specific dashboard
+where you can view their active, upcoming, and past diets.
 
-<div className="not-prose">
-  <Button
-    href="/sdks"
-    variant="text"
-    arrow="right"
-    children="Get your API key"
-  />
+<div className="px-3">
+    <Image
+        src={client_list}
+        alt="client_list.png"
+        className="rounded-2xl"
+    />
 </div>
-
-{/* <Guides /> */}
-
-{/* <Resources /> */}

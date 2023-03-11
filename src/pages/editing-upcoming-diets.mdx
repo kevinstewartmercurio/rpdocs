@@ -1,0 +1,152 @@
+import Image from "next/image"
+
+import {
+    EditingMeals,
+    ChangeLength,
+    BulkEdits,
+    CopyingMeals,
+    CompletingDiets
+} from "@/components/EditingUpcomingDiets"
+
+import editing_meals from "../../public/images/editing_meals.png"
+import food_list from "../../public/images/food_list.png"
+import change_length from "../../public/images/change_length.png"
+import change_length_form from "../../public/images/change_length_form.png"
+import edit_selected from "../../public/images/edit_selected.png"
+import edit_selected_form from "../../public/images/edit_selected_form.png"
+import copy_day from "../../public/images/copy_day.png"
+import copy_day_form from "../../public/images/copy_day_form.png"
+import copy_week from "../../public/images/copy_week.png"
+import copy_week_form from "../../public/images/copy_week_form.png"
+import completing_diets from "../../public/images/completing_diets.png"
+
+export const sections = [
+    {title: "Editing Meals", id: "editing-meals"},
+    {title: "Change Diet Length", id: "change-length"},
+    {title: "Bulk Edits", id: "bulk-edits"},
+    {title: "Copying Meals", id: "copying-meals"},
+    {title: "Completing Diets", id: "completing-diets"}
+]
+
+# Editing Upcoming Diets
+
+After generating the diet it will become the client's active diet. You can still
+edit which days are checkin days, transfer the diet to a different coach, and 
+see a history of all diet changes. Additionally you'll now be able to edit 
+individual meals, change the diet length, copy and paste days/weeks, duplicate 
+the diet, delete the diet, and post the diet for the client.
+
+<EditingMeals />
+
+Clicking the "Edit" button allows you to change the time when the meal is
+scheduled as well as the meals macros. Clicking the "List" button allows you to
+choose which proteins, veggies, carbs, and fats the meal should contain.
+
+<div className="px-3">
+    <Image 
+        src={editing_meals}
+        alt="editing_meals.png"
+        className="rounded-2xl"
+    />
+</div>
+<div className="px-3">
+    <Image 
+        src={food_list}
+        alt="food_list.png"
+        className="rounded-2xl"
+    />
+</div>
+
+<ChangeLength />
+
+To change the length of the diet click on the "Diet Length" button. Note that
+if the diet has already started then there may be days already completed by the
+client.
+
+<div className="px-3">
+    <Image 
+        src={change_length}
+        alt="change_length.png"
+        className="rounded-2xl"
+    />
+</div>
+<div className="px-3">
+    <Image 
+        src={change_length_form}
+        alt="change_length_form.png"
+        className="rounded-2xl"
+    />
+</div>
+
+<BulkEdits />
+
+Selecting multiple meals, days, and/or weeks allows you to make bulk edits. Use
+the "Edit Selected Meals" button to change macros or add comments to all
+selected meals.
+
+<div className="px-3">
+    <Image 
+        src={edit_selected}
+        alt="edit_selected.png"
+        className="rounded-2xl"
+    />
+</div>
+<div className="px-3">
+    <Image 
+        src={edit_selected_form}
+        alt="edit_selected_form.png"
+        className="rounded-2xl"
+    />
+</div>
+
+<CopyingMeals />
+
+To copy a day, click the "Copy Day to Day(s)" button and select the days you'd
+like to copy from and to.
+
+<div className="px-3">
+    <Image 
+        src={copy_day}
+        alt="copy_day.png"
+        className="rounded-2xl"
+    />
+</div>
+<div className="px-3">
+    <Image 
+        src={copy_day_form}
+        alt="copy_day_form.png"
+        className="rounded-2xl"
+    />
+</div>
+
+To copy a week, click the "Copy Week to Week(s)" button and select the week(s) 
+you'd like to copy from and to.
+
+<div className="px-3">
+    <Image 
+        src={copy_week}
+        alt="copy_week.png"
+        className="rounded-2xl"
+    />
+</div>
+<div className="px-3">
+    <Image 
+        src={copy_week_form}
+        alt="copy_week_form.png"
+        className="rounded-2xl"
+    />
+</div>
+
+<CompletingDiets />
+
+After the client has completed the diet you'll need to click the "Complete
+Diet" button to update the diet's status from active to past. You'll need to
+complete the diet in order for the client to start a new one.
+
+<div className="px-3">
+    <Image 
+        src={completing_diets}
+        alt="completing_diets.png"
+        className="rounded-2xl"
+    />
+</div>
