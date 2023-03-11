@@ -190,7 +190,7 @@ export const navigation = [
 			{title: "Index", href: "/"},
 			// {title: "Login", href: "/login"},
 			// {title: "Inviting Users", href: "/inviting-users"},
-			{title: "Coaching Dashboard", href: "/coaching-dashboard"},
+			// {title: "Coaching Dashboard", href: "/coaching-dashboard"},
 			// {title: "Client Dashboard", href: "/client-dashboard"}
 		]
 	},
