@@ -40,11 +40,21 @@ export function CopyingMeals() {
     )
 }
 
-export function CompletingDiets() {
+export function LockingMeals() {
     return (
         <>
-            <Heading level={2} id="completing-diets">
-                Completing A Diet
+            <Heading level={2} id="locking-meals">
+                Locking Meals
+            </Heading>
+        </>
+    )
+}
+
+export function PostingDiets() {
+    return (
+        <>
+            <Heading level={2} id="posting-diets">
+                Posting a Diet
             </Heading>
         </>
     )

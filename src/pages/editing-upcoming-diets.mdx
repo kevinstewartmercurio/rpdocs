@@ -5,7 +5,8 @@ import {
     ChangeLength,
     BulkEdits,
     CopyingMeals,
-    CompletingDiets
+    LockingMeals,
+    PostingDiets
 } from "@/components/EditingUpcomingDiets"
 
 import editing_meals from "../../public/images/editing_meals.png"
@@ -18,14 +19,16 @@ import copy_day from "../../public/images/copy_day.png"
 import copy_day_form from "../../public/images/copy_day_form.png"
 import copy_week from "../../public/images/copy_week.png"
 import copy_week_form from "../../public/images/copy_week_form.png"
-import completing_diets from "../../public/images/completing_diets.png"
+import locking_meals from "../../public/images/locking_meals.png"
+import posting_diets from "../../public/images/posting_diets.png"
 
 export const sections = [
     {title: "Editing Meals", id: "editing-meals"},
     {title: "Change Diet Length", id: "change-length"},
     {title: "Bulk Edits", id: "bulk-edits"},
     {title: "Copying Meals", id: "copying-meals"},
-    {title: "Completing Diets", id: "completing-diets"}
+    {title: "Locking Meals", id: "locking-meals"},
+    {title: "Posting a Diet", id: "posting-diets"}
 ]
 
 # Editing Upcoming Diets
@@ -137,16 +140,32 @@ you'd like to copy from and to.
     />
 </div>
 
-<CompletingDiets />
+<LockingMeals />
 
-After the client has completed the diet you'll need to click the "Complete
-Diet" button to update the diet's status from active to past. You'll need to
-complete the diet in order for the client to start a new one.
+Toggling the lock slider on an individual meal, a day of meals, or a week of
+meals prevents that meal/those meals from being edited. Any bulk edits made
+will not be applied to locked meals.
 
 <div className="px-3">
     <Image 
-        src={completing_diets}
-        alt="completing_diets.png"
+        src={locking_meals}
+        alt="locking_meals.png"
+        className="rounded-2xl"
+    />
+</div>
+
+<PostingDiets />
+
+After you've configured the diet, click on the "Post Diet" button to share it
+with the client. Note that you will still be able to make some edits after
+posting but after you post the diet the client will be able to interact with and
+make progress on it. Posting the diet updates its status from upcoming to
+active.
+
+<div className="px-3">
+    <Image 
+        src={posting_diets}
+        alt="posting_diets.png"
         className="rounded-2xl"
     />
 </div>

@@ -1,1 +1,30 @@
+import Image from "next/image"
+
+import { EndingDiets } from "@/components/ManagingActiveDiets"
+
+import ending_diets from "../../public/images/ending_diets.png"
+
+export const sections = [
+    {title: "Ending a Diet", id: "ending-diets"}
+]
+
 # Managing an Active Diet
+
+After posting a diet you still have all of the edit functionality that you had
+when you were editing upcoming diets (with the exception of deleting the diet).
+Now the client will log their completed meals and check in with you on specified
+days. 
+
+<EndingDiets />
+
+After the client has gone through the entire diet you'll need to click the 
+"Complete Diet" button. This will update the diet's status from active to
+completed.
+
+<div className="px-3">
+    <Image 
+        src={ending_diets}
+        alt="ending_diets.png"
+        className="rounded-2xl"
+    />
+</div>
